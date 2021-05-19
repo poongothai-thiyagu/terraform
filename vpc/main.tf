@@ -1,5 +1,5 @@
-resource "google_compute_network" "vpc" {
-  name                    = "vpc"
+resource "google_compute_network" "new" {
+  name                    = "new"
   auto_create_subnetworks = false
 }
 
@@ -8,7 +8,7 @@ resource "google_compute_subnetwork" "public" {
   name          = "public"
   ip_cidr_range = "10.0.0.0/24"
   region        = "asia-south1"
-  network       = google_compute_network.vpc.id
+  network       = google_compute_network.new.id
 }
 
 # Private Subnet
@@ -16,6 +16,7 @@ resource "google_compute_subnetwork" "private" {
   name          = "private"
   ip_cidr_range = "10.0.1.0/24"
   region        = "asia-south1"
-  network       = google_compute_network.vpc.id
+  network       = google_compute_network.new.id
   private_ip_google_access= true
 }
+
