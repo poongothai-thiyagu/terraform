@@ -18,7 +18,7 @@ resource "google_compute_instance" "test" {
     network = var.vpc_network_name
 
        access_config {
-        //ephermeral ID
+        
         }
     }
     
