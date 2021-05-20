@@ -8,6 +8,6 @@ output "network_name" {
   description = "The name of the VPC being created"
 }
 output "subnets" {
-  value       = google_compute_subnetwork.subnetwork
-  description = "The created subnet resources"
+  value       = google_compute_subnetwork.private
+  description = "The created private subnet resources"
 }
