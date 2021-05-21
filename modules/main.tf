@@ -1,8 +1,8 @@
 module "vpc" {
   source  = "terraform-google-modules/network/google"
-  version = "2.5.0"
+  version = "3.2.2"
 
-  project_id   = local.project
+  project_id   = "trial-299510"
   network_name = "vpc"
   routing_mode = "REGIONAL"
 
@@ -24,4 +24,4 @@ module "vpc" {
       subnet_flow_logs      = "false"
     }
   ]
-
+}
