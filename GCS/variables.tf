@@ -11,5 +11,5 @@ type        = string
 variable "region" {
 description = "Google Cloud region"
 type        = string
-default     = "europe-west2"
+default     = "asia-south1"
 }
