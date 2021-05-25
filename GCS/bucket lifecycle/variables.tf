@@ -13,3 +13,9 @@ description = "Google Cloud region"
 type        = string
 default     = "asia-south1"
 }
+
+variable "access" {
+    description = "bucket level access"
+    type        = bool
+    default     = true
+}
